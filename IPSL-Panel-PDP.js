@@ -49,6 +49,13 @@ var exp = (function($) {
 			material: 'Solid polypropolene',
 			guidePrice: '£11.44/m2'
 		},
+		coloursInfo: {
+			finish: 'Satin/Gloss',
+			size: '2.5mm thick x 1222mm wide',
+			length: '2440 mm or 3050mm',
+			material: 'Solid uPVC',
+			guidePrice: '£17.67-£37.03/m2'
+		},
 		CatHTML: '<div class="AWA-cat-info"><p>Panels are <span class="AWA-size"></span></p><p>Length: <span class="AWA-length"></span></p><p><span class="AWA-material"></span></p><p>Guide price: <span class="AWA-guidePrice"><?span></p></div><div class="AWA-quote-div"><a href="https://www.ipsluk.co.uk/customer-service/contact-us-free-brochure.html"><button class="AWA-button">Get a quote <span class="AWA-arrow-button">&#9654</span></button></a><p class="bar-phone"> <span class="phonetext">Help &amp; Advice: <br><span class="AWA-phone-container"></span>&nbsp<span data-calltracks-replaced-at="1486964770862" data-calltracks-orig-innerhtml="0114%20332%200388" onclick="window.location="tel:"+this.innerHTML;" class="calltracks_ipslukcouk-main">0114 332 0669</span> </span></p></div><p class="AWA-finish">Satin Finish</p>'
 	};
 
@@ -202,6 +209,11 @@ var exp = (function($) {
   		}\
   		.AWA-no-style {\
   			background: none !important;\
+  		}\
+  		.color-block {\
+  			width: 70%;\
+  			margin: 16px auto 30px;\
+  			overflow: overlay;\
   		}\
 	';
 
@@ -393,6 +405,51 @@ var exp = (function($) {
 			$firstParagraph.addClass('AWA-paragraph');
 			$($firstParagraph[0].nextSibling).wrap('<div class="AWA-paragraph">');
 			$('li:contains("Safe active")').parent('ul').addClass('AWA-paragraph');
+
+			// Add phone icons
+			$('.AWA-phone-container').html(exp.vars.phoneIcon);
+
+			// Re-run calltracks script
+			$.ajax({
+				url: 'https://lite.calltracks.com/calltracks_web_number_dynamics/loader.js',
+				dataType: 'script',
+			});
+		}
+
+		// PROCLAD COLOURS
+		if (window.location.href.indexOf('proclad-colours') > -1 ) {
+
+			// Add in additional product info
+			var $imgbox1 = $('.imgbox1.ipad');
+			$('.imgbox1.ipad img').attr('src', 'http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/341f91e15f71ac999e3912e6e7f38aee_proclad-colors.jpg');
+			$imgbox1.after(exp.vars.CatHTML);
+
+			// Call function to add specific info
+			addCatInfo(exp.vars.coloursInfo);
+
+			// Style lower paragraphs
+			var $lowerParagraph = $('h3:contains("Proclad Colour Features")');
+			$lowerParagraph.addClass('AWA-paragraph');
+			$lowerParagraph.siblings('p').addClass('AWA-paragraph');
+
+			// Delete unwanted elements
+			$('h2:contains("Proclad Colours")').hide();
+			$('.right100.lefts').children('ul').hide();
+			var $p1 = $('p:contains("Proclad wall claddings are extremely popular")')
+			var $p2 = $('p:contains("Contact us today to learn more about")')
+			$p1.removeClass('AWA-paragraph');
+			$p2.removeClass('AWA-paragraph');
+			$p1.hide();
+			$p2.hide();
+
+			// Add Paul div
+			$($('.AWA-paragraph')[3]).after(exp.vars.PaulDiv);
+
+			// Add help div
+			$('.color-block').after(exp.vars.helpDiv);
+
+			// Add AWA list
+			$('.AWA-help-div').after(exp.vars.addList);
 
 			// Add phone icons
 			$('.AWA-phone-container').html(exp.vars.phoneIcon);
