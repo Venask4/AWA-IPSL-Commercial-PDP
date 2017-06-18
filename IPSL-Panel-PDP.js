@@ -56,7 +56,41 @@ var exp = (function($) {
 			material: 'Solid uPVC',
 			guidePrice: '£17.67-£37.03/m2'
 		},
-		CatHTML: '<div class="AWA-cat-info"><p>Panels are <span class="AWA-size"></span></p><p>Length: <span class="AWA-length"></span></p><p><span class="AWA-material"></span></p><p>Guide price: <span class="AWA-guidePrice"><?span></p></div><div class="AWA-quote-div"><a href="https://www.ipsluk.co.uk/customer-service/contact-us-free-brochure.html"><button class="AWA-button">Get a quote <span class="AWA-arrow-button">&#9654</span></button></a><p class="bar-phone"> <span class="phonetext">Help &amp; Advice: <br><span class="AWA-phone-container"></span>&nbsp<span data-calltracks-replaced-at="1486964770862" data-calltracks-orig-innerhtml="0114%20332%200388" onclick="window.location="tel:"+this.innerHTML;" class="calltracks_ipslukcouk-main">0114 332 0669</span> </span></p></div><p class="AWA-finish">Satin Finish</p>'
+		CatHTML: '<div class="AWA-cat-info"><p>Panels are <span class="AWA-size"></span></p><p>Length: <span class="AWA-length"></span></p><p><span class="AWA-material"></span></p><p>Guide price: <span class="AWA-guidePrice"><?span></p></div><div class="AWA-quote-div"><a href="https://www.ipsluk.co.uk/customer-service/contact-us-free-brochure.html"><button class="AWA-button">Get a quote <span class="AWA-arrow-button">&#9654</span></button></a><p class="bar-phone"> <span class="phonetext">Help &amp; Advice: <br><span class="AWA-phone-container"></span>&nbsp<span data-calltracks-replaced-at="1486964770862" data-calltracks-orig-innerhtml="0114%20332%200388" onclick="window.location="tel:"+this.innerHTML;" class="calltracks_ipslukcouk-main">0114 332 0669</span> </span></p></div><p class="AWA-finish">Satin Finish</p>',
+		imgHTML: '<div id="AWA-img-wrap"><div id="AWA-img-1" class="AWA-img"></div><div id="AWA-img-2" class="AWA-img"></div><div id="AWA-img-3" class="AWA-img"></div><div id="AWA-img-4" class="AWA-img"></div></div>',
+		premiumImg: {
+			img1: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/99be59216a202cb1b21040cf5e85ec4a_city_of_london_academy_islington_04.jpg">',
+			img2: '<img src="//useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/a6ea626c41a2300f31ac6523821a6fc1_ecophon_pharma.png">',
+			img3: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/92367ce0814785fb7b640cbbc42b769e_ipsl_cladding_aug10_dsc0057.jpg">',
+			img4: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/466878ce63ba0f3f7ecf65c560d6bea1_maidenhead_special_needs_04.jpg">'
+		},
+		plusImg: {
+			img1: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/0e6d45c9fd9e266a815f9d40fd8e953d_city_of_london_academy_islington_01.jpg">',
+			img2: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/97b1290737bba22c49f9b9066f9742fa_city_of_london_academy_islington_06.jpg">',
+			img3: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/5a814f1c8b112a22551037d9455a5a9b_tesco_sheffield_05.jpg">',
+			img4: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/81ae233078f524ed5493f1ce76ae254e_tesco_sheffield_07.jpg">'
+		},
+		lowTempImg: {
+			img1: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/cc2aa9d93612f1d7b168df0a5ce430a5_img_0004.jpg">',
+			img2: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/20d53cb46a97ac40e3a46546f2b19580_img_0005.jpg">',
+			img3: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/c3a0078c5034ae482576a28a5798fafc_img_0007.jpg">',
+			img4: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/b1eef371314a3461797f1189b0a8cd0d_winery1.jpg">'
+		},
+		coloursImg: {
+			img1: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/e7348e0cf954d7d318746e4444752384_grape_4.jpg">',
+			img2: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/377c6640b245340b17b9265c05cc8b2a_proclad_dark_cherry_room_1.jpg">',
+			img3: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/97446e74cb431a2bd503381109fbf750_proclad_ocean_room_8.jpg">',
+			img4: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/51a5f4a2300442a5fb0eaa9e60ffff62_proclad_red_wine_room_3.jpg">',
+			img5: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/640ee951b17d57d39ac5f0f5e97ead66_proclad-aqua-close-up-1200mm.jpg">'
+		},
+		hyperImg: {
+			img1: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/7add8b07c4dc36a54b7730035fb49d4a_adam_004.jpg">',
+			img2: '<img src="http:///useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/821406b5e28899f04317b60ebda02702_birmingham_psychiatric_hospital.png">',
+			img3: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/12c97f2c2e961a1ecac5e35d89682f94_ecophon_szpital_poznan.png">',
+			img4: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/de2fab687f1e133ced891be1e1dd43e7_gitterfilter.jpg">',
+			img5: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/1a70f5e0198c566b375001de18fdf6b4_img_0004.jpg">',
+			img6: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/89c8de228edc34ebdcfd041ec0138bcd_img_0005.jpg">'
+		}
 	};
 
 	// Styles
@@ -222,6 +256,21 @@ var exp = (function($) {
   			margin: 16px auto 30px;\
   			overflow: overlay;\
   		}\
+  		#AWA-img-wrap {\
+			height: 200px;\
+			text-align: justify;\
+		}\
+  		.AWA-img {\
+  			width: 20%;\
+  			display: inline-block;\
+  			vertical-align: top;\
+  			margin: 25px 2.5% 0 2.5%;\
+  		}\
+  		.AWA-img:after {\
+  			content: "";\
+  			width: 100%;\
+  			display: inline-block;\
+  		}\
 	';
 
 
@@ -235,7 +284,18 @@ var exp = (function($) {
 		$('.advive-link.lefts').hide();
 		$('.col-left.sidebar.col-left-first').hide();
 
-		// Define function for adding product information
+		// Add img wrapper div
+		$('.main').before(exp.vars.imgHTML);
+
+		// Define img adder function
+		function addImgs(page) {
+			$('#AWA-img-1').html(page.img1);
+			$('#AWA-img-2').html(page.img2);
+			$('#AWA-img-3').html(page.img3);
+			$('#AWA-img-4').html(page.img4);
+		}
+
+		// Define product info adder function
 		function addCatInfo(page) {
 			$('.AWA-finish').html(page.finish);
 			$('.AWA-size').html(page.size);
@@ -268,6 +328,9 @@ var exp = (function($) {
 			// Add in additional product info
 			var $imgbox1 = $('.imgbox1.ipad');
 			$imgbox1.after(exp.vars.CatHTML);
+
+			// Call function to add images
+			addImgs(exp.vars.premiumImg);
 
 			// Call function to add specific info
 			addCatInfo(exp.vars.premiumInfo);
@@ -307,6 +370,9 @@ var exp = (function($) {
 			var $imgbox1 = $('.imgbox1.ipad');
 			$imgbox1.after(exp.vars.CatHTML);
 
+			// Call function to add images
+			addImgs(exp.vars.plusImg);
+
 			// Call function to add specific info
 			addCatInfo(exp.vars.plusInfo);
 
@@ -345,6 +411,9 @@ var exp = (function($) {
 			var $imgbox1 = $('.imgbox1.ipad');
 			$imgbox1.after(exp.vars.CatHTML);
 
+			// Call function to add images
+			addImgs(exp.vars.lowTempImg);
+
 			// Call function to add specific info
 			addCatInfo(exp.vars.lowTempInfo);
 
@@ -379,6 +448,18 @@ var exp = (function($) {
 		// PROCLAD HYPER GRADE
 		if (window.location.href.indexOf('proclad-hyper-grade') > -1 ) {
 			
+			// Add additional div for 5th & 6th img
+			$('#AWA-img-4').after('<div id="AWA-img-5" class="AWA-img"></div><div id="AWA-img-6" class="AWA-img"></div>');
+			// Adjust styling for 6 images
+			$('.AWA-img').css({'width': '12.5%', 'margin': '12px 2% 0 2%'});
+			$('#AWA-img-wrap').css('height','100px');
+
+			// Call function to add images
+			addImgs(exp.vars.hyperImg);
+			// Add 5th & 6th imgs
+			$('#AWA-img-5').html(exp.vars.hyperImg.img5);
+			$('#AWA-img-6').html(exp.vars.hyperImg.img6);
+
 			// Add in additional product info
 			var $imgbox1 = $('.imgbox1.ipad');
 			$imgbox1.after(exp.vars.hyperCatHTML);
@@ -431,8 +512,21 @@ var exp = (function($) {
 			$('.imgbox1.ipad img').attr('src', 'http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/341f91e15f71ac999e3912e6e7f38aee_proclad-colors.jpg');
 			$imgbox1.after(exp.vars.CatHTML);
 
+			// Add additional div for 5th img
+			$('#AWA-img-4').after('<div id="AWA-img-5" class="AWA-img"></div>');
+			// Adjust styling for 5 images
+			$('.AWA-img').css({'width': '15%', 'margin': '12px 2.5% 0 2.5%'});
+			$('#AWA-img-wrap').css('height','150px');
+
+			// Call function to add images
+			addImgs(exp.vars.coloursImg);
+			// Add 5th img
+			$('#AWA-img-5').html(exp.vars.coloursImg.img5);
+
 			// Call function to add specific info
 			addCatInfo(exp.vars.coloursInfo);
+			// Adjust finish styling
+			$('.AWA-finish').css('margin-top','-91px');
 
 			// Style lower paragraphs
 			var $lowerParagraph = $('h3:contains("Proclad Colour Features")');
