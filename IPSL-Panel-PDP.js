@@ -33,30 +33,41 @@ var exp = (function($) {
 			size: '2.5mm thick x 1222mm wide',
 			length: '2440mm or 3050mm',
 			material: 'Solid uPVC',
-			guidePrice: '£14.30/m2'
+			guidePrice: '£14.30/m2',
+			temp: '-5°C to 60°C',
+			fireRating: 'Class 0 Fire Rated',
+			third: 'Impact-Resistant, Hard Wearing'
 		},
 		plusInfo: {
 			finish: 'Gloss Finish',
 			size: '3mm thick x 1222mm wide',
 			length: '2440 mm or 3050mm',
 			material: 'Foam core uPVC',
-			guidePrice: '£14.30/m2'
+			guidePrice: '£14.30/m2',
+			temp: '-5°C to 60°C',
+			fireRating: 'Class 1 Fire Rated',
+			third: 'Meets EU Food Hygiene Regulations'
 		},
 		lowTempInfo: {
 			finish: 'Gloss Finish',
 			size: '3mm thick x 1222mm wide',
 			length: '2440 mm or 3050mm',
 			material: 'Solid polypropolene',
-			guidePrice: '£11.44/m2'
+			guidePrice: '£11.44/m2',
+			temp: '-25°C to 110°C',
+			fireRating: 'Class 4 Fire Rated',
+			third: 'Meets EU Food Hygiene Regulations'
 		},
 		coloursInfo: {
 			finish: 'Satin/Gloss Finish',
 			size: '2.5mm thick x 1222mm wide',
 			length: '2440 mm or 3050mm',
 			material: 'Solid uPVC',
-			guidePrice: '£17.67-£37.03/m2'
+			guidePrice: '£17.67-£37.03/m2',
+			temp: '-20°C to 60°C',
+			fireRating: 'Class 1 Fire Rated',
 		},
-		CatHTML: '<div class="AWA-cat-info"><p>Panels are <span class="AWA-size"></span></p><p>Length: <span class="AWA-length"></span></p><p><span class="AWA-material"></span></p><p>Guide price: <span class="AWA-guidePrice"><?span></p></div><div class="AWA-quote-div"><a href="https://www.ipsluk.co.uk/customer-service/contact-us-free-brochure.html"><button class="AWA-button">Get a quote <span class="AWA-arrow-button">&#9654</span></button></a><p class="bar-phone"> <span class="phonetext">Help &amp; Advice: <br><span class="AWA-phone-container"></span>&nbsp<span data-calltracks-replaced-at="1486964770862" data-calltracks-orig-innerhtml="0114%20332%200388" onclick="window.location="tel:"+this.innerHTML;" class="calltracks_ipslukcouk-main">0114 332 0669</span> </span></p></div><p class="AWA-finish">Satin Finish</p>',
+		CatHTML: '<div class="AWA-cat-info"><p>Panels are <span class="AWA-size"></span></p><p>Length: <span class="AWA-length"></span></p><p><span class="AWA-material"></span></p><p>Guide price: <span class="AWA-guidePrice"><?span></p></div><div class="AWA-quote-div"><a href="https://www.ipsluk.co.uk/customer-service/contact-us-free-brochure.html"><button class="AWA-button">Get a quote <span class="AWA-arrow-button">&#9654</span></button></a><p class="bar-phone"> <span class="phonetext">Help &amp; Advice: <br><span class="AWA-phone-container"></span>&nbsp<span data-calltracks-replaced-at="1486964770862" data-calltracks-orig-innerhtml="0114%20332%200388" onclick="window.location="tel:"+this.innerHTML;" class="calltracks_ipslukcouk-main">0114 332 0669</span> </span></p></div><div class="AWA-block"></div><ul class="AWA-crop"><li class="AWA-temp"></li><li class="AWA-fire-rating"></li><li class="AWA-third-item"></li><li class="AWA-finish">Satin Finish</li></ul>',
 		imgHTML: '<div id="AWA-img-wrap"><div id="AWA-img-1" class="AWA-img"></div><div id="AWA-img-2" class="AWA-img"></div><div id="AWA-img-3" class="AWA-img"></div><div id="AWA-img-4" class="AWA-img"></div></div>',
 		premiumImg: {
 			img1: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/99be59216a202cb1b21040cf5e85ec4a_city_of_london_academy_islington_04.jpg">',
@@ -107,13 +118,12 @@ var exp = (function($) {
 			position: absolute;\
 			z-index: 0;\
 			margin-left: 5%;\
+			clip: rect(0, 220px, 200px, 0);\
 		}\
 		.inner-banner .BNR-bottom {\
 			height: auto;\
 		}\
 		.AWA-finish {\
-			margin-top: -45px;\
-			margin-left: 289px;\
 			font-family: Arial Narrow;\
 			clear: both;\
 			font-size: 21px;\
@@ -271,6 +281,25 @@ var exp = (function($) {
   			width: 100%;\
   			display: inline-block;\
   		}\
+  		.AWA-crop {\
+  			margin-top: -185px;\
+  			margin-left: 289px;\
+		    font-family: Arial Narrow;\
+		    clear: both;\
+		    font-size: 21px;\
+		    text-shadow: 0px 0.1px, 0.1px 0px, 0.1px 0.1px 0.6px black;\
+		    color: #1F1F1F;\
+		    z-index: 1;\
+		    position: absolute;\
+		    line-height: 47px;\
+		    width: 285px;\
+  		}\
+  		.AWA-block {\
+  			width: 285px;\
+  			height: 150px;\
+  			display: inline-block;\
+  			float: left;\
+  		}\
 	';
 
 
@@ -302,6 +331,9 @@ var exp = (function($) {
 			$('.AWA-length').html(page.length);
 			$('.AWA-material').html(page.material);
 			$('.AWA-guidePrice').html(page.guidePrice);
+			$('.AWA-temp').html(page.temp);
+			$('.AWA-fire-rating').html(page.fireRating);
+			$('.AWA-third-item').html(page.third);
 		}
 
 		// MOVE APPLICATION LIST FOR ALL PAGES EXCEPT HYPERGRADE
@@ -525,8 +557,6 @@ var exp = (function($) {
 
 			// Call function to add specific info
 			addCatInfo(exp.vars.coloursInfo);
-			// Adjust finish styling
-			$('.AWA-finish').css('margin-top','-91px');
 
 			// Style lower paragraphs
 			var $lowerParagraph = $('h3:contains("Proclad Colour Features")');
