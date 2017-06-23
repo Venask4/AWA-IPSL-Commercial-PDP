@@ -23,7 +23,6 @@ var exp = (function($) {
 	// Variables
 	// Object containing variables, generally these would be strings or jQuery objects
 	exp.vars = {
-		hyperCatHTML: '<div class="AWA-cat-info"><p>Panels are 2.5mm thick x 1222mm wide</p><p>Length: 2440 mm or 3050mm</p><p>Solid uPVC</p><p>Guide price: £17.72/m2</p></div><div class="AWA-quote-div"><a href="https://www.ipsluk.co.uk/customer-service/contact-us-free-brochure.html"><button class="AWA-button">Get a quote <span class="AWA-arrow-button">&#9654</span></button></a><p class="bar-phone"> <span class="phonetext">Help &amp; Advice: <br><span class="AWA-phone-container"></span>&nbsp<span data-calltracks-replaced-at="1486964770862" data-calltracks-orig-innerhtml="0114%20332%200388" onclick="window.location="tel:"+this.innerHTML;" class="calltracks_ipslukcouk-main">0114 332 0669</span> </span></p></div><p class="AWA-finish">Satin Finish</p>',
 		PaulDiv: '<div class="AWA-Paul-div"> <div class="AWA-image-profile"> <img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/e23b84cffc7d257cfa570d0fb6ef4137_paul.png"> <p>Paul Clinton</p> <p>Product Adviser</p> </div> <h3>IPSL- The UK\'s no 1 specialist in wall cladding</h3> <ul class="AWA-app-list"> <li>Supply only or full installation service</li> <li>Free delivery on orders over £100</li> <li>100% guaranteed- 10 year warranty</li> <li>Free installation helpline and product advice</li> <li>Free, no obligation site surveys</li> <li class="AWA-no-style"><a href="https://www.ipsluk.co.uk/customer-service/contact-us-free-brochure.html"><button class="AWA-button">Ask for free product advice <span class="AWA-arrow-button">&#9654</span></button></a></li></ul> </div>',
 		helpDiv: '<div class="AWA-help-div"> <h1 class="AWA-help-h3">Get help &amp; advice: </h1><span class="AWA-phone-container AWA-help-phone"></span>&nbsp<span data-calltracks-replaced-at="1486964770862" data-calltracks-orig-innerhtml="0114%20332%200388" onclick="window.location="tel:"+this.innerHTML;" class="calltracks_ipslukcouk-main AWA-help-phone">0114 332 0669</span> </span> <a href="https://www.ipsluk.co.uk/customer-service/contact-us-free-brochure.html"><button class="AWA-button" style="float: right;">Ask for free product advice <span class="AWA-arrow-button">&#9654</span></button></a></div>',
 		addList: '<div class="AWA-add-list AWA-paragraph"> <h3 class="AWA-paragraph" style="width: 270px !important;">All of our commercial panels:</h3> <ul class="AWA-paragraph" style="width: 350px !important;"> <li>Meet Hygiene regulations</li> <li>Are non shedding and grout free</li> <li>Are easy to install and maintain</li> <li>Are waterproof and fireproof</li> <li>Are scratch free and impact resistant</li> </ul> </div>',
@@ -67,7 +66,17 @@ var exp = (function($) {
 			temp: '-20°C to 60°C',
 			fireRating: 'Class 1 Fire Rated',
 		},
-		CatHTML: '<div class="AWA-cat-info"><p>Panels are <span class="AWA-size"></span></p><p>Length: <span class="AWA-length"></span></p><p><span class="AWA-material"></span></p><p>Guide price: <span class="AWA-guidePrice"><?span></p></div><div class="AWA-quote-div"><a href="https://www.ipsluk.co.uk/customer-service/contact-us-free-brochure.html"><button class="AWA-button">Get a quote <span class="AWA-arrow-button">&#9654</span></button></a><p class="bar-phone"> <span class="phonetext">Help &amp; Advice: <br><span class="AWA-phone-container"></span>&nbsp<span data-calltracks-replaced-at="1486964770862" data-calltracks-orig-innerhtml="0114%20332%200388" onclick="window.location="tel:"+this.innerHTML;" class="calltracks_ipslukcouk-main">0114 332 0669</span> </span></p></div><div class="AWA-block"></div><ul class="AWA-crop"><li class="AWA-temp"></li><li class="AWA-fire-rating"></li><li class="AWA-third-item"></li><li class="AWA-finish">Satin Finish</li></ul>',
+		hyperInfo: {
+			finish: 'Satin Finish',
+			size:'2.5mm thick x 1222mm wide',
+			length: '2440 mm or 3050mm',
+			material: 'Solid uPVC',
+			guidePrice: '£17.72/m2',
+			temp: '-5°C to 60°C',
+			fireRating: 'Class 0 Fire Rated',
+			third: 'Antimicrobial Action'
+		},
+		CatHTML: '<ul class="AWA-crop"><li class="AWA-temp"></li><li class="AWA-fire-rating"></li><li class="AWA-third-item"></li><li class="AWA-finish">Satin Finish</li></ul><div class="AWA-cat-info"><p>Panels are <span class="AWA-size"></span></p><p>Length: <span class="AWA-length"></span></p><p><span class="AWA-material"></span></p><p>Guide price: <span class="AWA-guidePrice"><?span></p></div><div class="AWA-quote-div"><a href="https://www.ipsluk.co.uk/customer-service/contact-us-free-brochure.html"><button class="AWA-button">Get a quote <span class="AWA-arrow-button">&#9654</span></button></a><p class="bar-phone"> <span class="phonetext">Help &amp; Advice: <br><span class="AWA-phone-container"></span>&nbsp<span data-calltracks-replaced-at="1486964770862" data-calltracks-orig-innerhtml="0114%20332%200388" onclick="window.location="tel:"+this.innerHTML;" class="calltracks_ipslukcouk-main">0114 332 0669</span> </span></p></div>',
 		imgHTML: '<div id="AWA-img-wrap"><div id="AWA-img-1" class="AWA-img"></div><div id="AWA-img-2" class="AWA-img"></div><div id="AWA-img-3" class="AWA-img"></div><div id="AWA-img-4" class="AWA-img"></div></div>',
 		premiumImg: {
 			img1: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/99be59216a202cb1b21040cf5e85ec4a_city_of_london_academy_islington_04.jpg">',
@@ -118,13 +127,17 @@ var exp = (function($) {
 			position: absolute;\
 			z-index: 0;\
 			margin-left: 5%;\
-			clip: rect(0, 220px, 200px, 0);\
+			clip: rect(0, 230px, 200px, 0);\
+		}\
+		.imgbox1.ipad img {\
+			max-width: none;\
 		}\
 		.inner-banner .BNR-bottom {\
 			height: auto;\
 		}\
 		.AWA-finish {\
-			font-family: Arial Narrow;\
+			font-family: "Arial Narrow", Arial;\
+			font-stretch: condensed;\
 			clear: both;\
 			font-size: 21px;\
 		    text-shadow: 0px 0.1px, 0.1px 0px, 0.1px 0.1px 0.6px black;\
@@ -135,17 +148,18 @@ var exp = (function($) {
 		.AWA-cat-info {\
 			padding-top: 16px;\
 			display: inline-block;\
-			margin-left: 520px;\
+			margin-left: 600px;\
 			z-index: 1;\
 			position: relative;\
 		}\
 		.AWA-cat-info p {\
 			color: black;\
-			font-family: "Arial Narrow";\
+			font-family: "Arial Narrow", Arial;\
+			font-stretch: condensed;\
 		    font-size: 21px;\
 		    text-shadow: 0px 0.1px, 0.1px 0px, 0.1px 0.1px 0.6px black;\
 		    color: #1F1F1F;\
-		    line-height: 33px;\
+		    line-height: 39px;\
 		    margin: 12px;\
 		}\
 		.AWA-quote-div {\
@@ -282,24 +296,83 @@ var exp = (function($) {
   			display: inline-block;\
   		}\
   		.AWA-crop {\
-  			margin-top: -185px;\
+  			margin-top: 22px;\
   			margin-left: 289px;\
-		    font-family: Arial Narrow;\
+		    font-family: "Arial Narrow", Arial;\
+		    font-stretch: condensed;\
 		    clear: both;\
 		    font-size: 21px;\
 		    text-shadow: 0px 0.1px, 0.1px 0px, 0.1px 0.1px 0.6px black;\
 		    color: #1F1F1F;\
 		    z-index: 1;\
 		    position: absolute;\
-		    line-height: 47px;\
+		    line-height: 50px;\
 		    width: 285px;\
   		}\
-  		.AWA-block {\
-  			width: 285px;\
-  			height: 150px;\
-  			display: inline-block;\
-  			float: left;\
+  		.main-container.col2-left-layout {\
+  			min-width: 1181px;\
   		}\
+  		@media only screen and (max-width: 768px) {\
+  			.lefts .top {\
+  				display: none;\
+  			}\
+  		}\
+		@media only screen and (max-width: 768px) {\
+			.ipad, .ipad img {\
+			    width: 432px;\
+			}\
+			.imgbox1.ipad {\
+				clip: rect(0, 155px, 200px, 0);\
+				margin-top: -16px;\
+			}\
+			.main-container.col2-left-layout {\
+  			min-width: 0;\
+  			}\
+  			.AWA-cat-info {\
+  				margin: 25px auto;\
+  				display: block;\
+  			}\
+  			.AWA-crop {\
+  				position: relative;\
+  				line-height: 34px;\
+  				margin: 22px 0 0 200px;\
+  			}\
+  			.AWA-finish {\
+  				margin: 10px 0 0 -188px;\
+  			}\
+  			.AWA-quote-div {\
+  				margin-top: 0;\
+  			}\
+  			#AWA-img-wrap {\
+  				height: 100px !important;\
+  			}\
+  			.AWA-app-list {\
+  				columns: 1;\
+  			}\
+  			.AWA-Paul-div .AWA-app-list {\
+  				clear: both;\
+  			}\
+  			.AWA-help-div {\
+  				padding-right: 5px;\
+  				height: auto;\
+  			}\
+  			.AWA-help-h3 {\
+  				float: none;\
+  				text-align: center;\
+  			}\
+  			.AWA-help-div .AWA-button {\
+  				float: none !important;\
+  				width: 255px;\
+  				display: block;\
+  				margin: 0 auto;\
+  			}\
+  			.AWA-phone-container.AWA-help-phone {\
+  				margin-left: 30%;\
+  			}\
+  			.AWA-colors-adjustment {\
+  				margin-left: 0;\
+  			}\
+		}\
 	';
 
 
@@ -367,9 +440,6 @@ var exp = (function($) {
 			// Call function to add specific info
 			addCatInfo(exp.vars.premiumInfo);
 
-			// Adjust margin
-			$('.AWA-cat-info').css('margin-left','570px');
-
 			// Change application list title
 			$appListTitle.text('Proclad Premium Grade meets all regulatory standards for:');
 
@@ -408,9 +478,6 @@ var exp = (function($) {
 			// Call function to add specific info
 			addCatInfo(exp.vars.plusInfo);
 
-			// Adjust margin
-			$('.AWA-cat-info').css('margin-left','600px');
-
 			// Change application list title
 			$appListTitle.text('Proclad Plus Grade meets all regulatory standards for:');
 
@@ -448,9 +515,6 @@ var exp = (function($) {
 
 			// Call function to add specific info
 			addCatInfo(exp.vars.lowTempInfo);
-
-			// Adjust margin
-			$('.AWA-cat-info').css('margin-left','600px');
 
 			// Change application list title
 			$appListTitle.text('Proclad Low Temp Grade meets all regulatory standards for:');
@@ -494,7 +558,10 @@ var exp = (function($) {
 
 			// Add in additional product info
 			var $imgbox1 = $('.imgbox1.ipad');
-			$imgbox1.after(exp.vars.hyperCatHTML);
+			$imgbox1.after(exp.vars.CatHTML);
+
+			// Call function to add specific info
+			addCatInfo(exp.vars.hyperInfo);
 
 			// Move application list up
 			var $appListTitle = $('h3:contains("Ideal for medical and food")');
@@ -581,6 +648,9 @@ var exp = (function($) {
 
 			// Add AWA list
 			$('.AWA-help-div').after(exp.vars.addList);
+
+			// Adjust breakpoint styling
+			$('.AWA-finish').addClass('AWA-colors-adjustment')
 
 			// Add phone icons
 			$('.AWA-phone-container').html(exp.vars.phoneIcon);
