@@ -107,9 +107,7 @@ var exp = (function($) {
 			img1: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/7add8b07c4dc36a54b7730035fb49d4a_adam_004.jpg">',
 			img2: '<img src="http:///useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/821406b5e28899f04317b60ebda02702_birmingham_psychiatric_hospital.png">',
 			img3: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/12c97f2c2e961a1ecac5e35d89682f94_ecophon_szpital_poznan.png">',
-			img4: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/de2fab687f1e133ced891be1e1dd43e7_gitterfilter.jpg">',
-			img5: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/1a70f5e0198c566b375001de18fdf6b4_img_0004.jpg">',
-			img6: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/89c8de228edc34ebdcfd041ec0138bcd_img_0005.jpg">'
+			img4: '<img src="http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/de2fab687f1e133ced891be1e1dd43e7_gitterfilter.jpg">'
 		}
 	};
 
@@ -278,7 +276,7 @@ var exp = (function($) {
   		.color-block {\
   			width: 70%;\
   			margin: 16px auto 30px;\
-  			overflow: overlay;\
+  			overflow: auto;\
   		}\
   		#AWA-img-wrap {\
 			height: 200px;\
@@ -344,7 +342,11 @@ var exp = (function($) {
   				margin-top: 0;\
   			}\
   			#AWA-img-wrap {\
-  				height: 100px !important;\
+  				height: 300px !important;\
+  			}\
+  			.AWA-img {\
+  				width: 40%;\
+  				margin: 25px 5% 0 5%;\
   			}\
   			.AWA-app-list {\
   				columns: 1;\
@@ -544,17 +546,8 @@ var exp = (function($) {
 		// PROCLAD HYPER GRADE
 		if (window.location.href.indexOf('proclad-hyper-grade') > -1 ) {
 			
-			// Add additional div for 5th & 6th img
-			$('#AWA-img-4').after('<div id="AWA-img-5" class="AWA-img"></div><div id="AWA-img-6" class="AWA-img"></div>');
-			// Adjust styling for 6 images
-			$('.AWA-img').css({'width': '12.5%', 'margin': '12px 2% 0 2%'});
-			$('#AWA-img-wrap').css('height','100px');
-
 			// Call function to add images
 			addImgs(exp.vars.hyperImg);
-			// Add 5th & 6th imgs
-			$('#AWA-img-5').html(exp.vars.hyperImg.img5);
-			$('#AWA-img-6').html(exp.vars.hyperImg.img6);
 
 			// Add in additional product info
 			var $imgbox1 = $('.imgbox1.ipad');
@@ -611,16 +604,8 @@ var exp = (function($) {
 			$('.imgbox1.ipad img').attr('src', 'http://useruploads.visualwebsiteoptimizer.com/useruploads/268527/images/341f91e15f71ac999e3912e6e7f38aee_proclad-colors.jpg');
 			$imgbox1.after(exp.vars.CatHTML);
 
-			// Add additional div for 5th img
-			$('#AWA-img-4').after('<div id="AWA-img-5" class="AWA-img"></div>');
-			// Adjust styling for 5 images
-			$('.AWA-img').css({'width': '15%', 'margin': '12px 2.5% 0 2.5%'});
-			$('#AWA-img-wrap').css('height','150px');
-
 			// Call function to add images
 			addImgs(exp.vars.coloursImg);
-			// Add 5th img
-			$('#AWA-img-5').html(exp.vars.coloursImg.img5);
 
 			// Call function to add specific info
 			addCatInfo(exp.vars.coloursInfo);
